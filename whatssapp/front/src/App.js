@@ -11,7 +11,9 @@ const AppMessages = (props) => {
 
   const getData = async () => {
     try {
-        const response = await fetch("https://770e-90-154-81-226.ngrok-free.app/getdata");
+        let url = new URL(window.location.href + "getdata");
+        // let url = window.location.href;
+        const response = await fetch(url);
         const textData = await response.json();
         // console.log("React ", JSON.parse(textData));
         setMyMessage(JSON.parse(textData));
