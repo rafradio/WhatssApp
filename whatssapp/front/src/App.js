@@ -23,24 +23,6 @@ const AppMessages = (props) => {
   }
 
   const funcObserver = (item) => {
-    // let options = {
-    //   root: document.querySelector("#box"),
-    //   rootMargin: "0px",
-    //   threshold: 1.0,
-    // };
-
-    // let callback1 = (entries, observer) => {
-    //   entries.forEach(
-    //       (entry) => {
-    //         if (entry.isIntersecting) {
-    //           console.log('on the screen!');
-    //         }
-    //         entry.scrollIntoView({behavior: 'smooth'});
-    //       }
-    //   )
-    // }
-    // const observer = new IntersectionObserver(callback1, options);
-    // observer.observe(item);
     item.scrollIntoView({behavior: 'smooth'});
   }
 
