@@ -10,13 +10,24 @@ import Footer from './Footer';
 
 
 const AssideMain = (props) => {
+    const [data, setData] = useState({});
 
     const makeAction = () => {
-        // event.preventDefault();
-        // let button1 = document.getElementById("webQuery");
+        
         let bodyMessageNew = document.getElementById("message_area");
         bodyMessageNew.style.display = "flex";
+        let idInstance = document.getElementById("IdInstance").value;
+        let apiTokenInstance = document.getElementById("ApiToken").value;
+        setData({idInstance: idInstance, apiTokenInstance: apiTokenInstance});
+
+        // useEffect(() => {
+        //     setData({idInstance: idInstance, apiTokenInstance: apiTokenInstance});
+        // }, []);
+        
     }
+
+    // useEffect(() => {
+    // });
 
     return (
         <React.Fragment>
@@ -30,7 +41,7 @@ const AssideMain = (props) => {
                     <Button  variant="contained" id="Token" className="json_button" onClick={() => makeAction()}>Начать работать</Button>
                 </Box>
                 <AppMessages />
-                <Footer />
+                <Footer data={data}/>
             </Box>
         </React.Fragment>
     )

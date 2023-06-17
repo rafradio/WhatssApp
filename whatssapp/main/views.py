@@ -19,6 +19,9 @@ def index(request):
 
         if json_data['typeWebhook'] == 'outgoingMessageReceived':
             makeRecord("outgoing", json_data['messageData']['textMessageData']['textMessage'])
+
+        if json_data['typeWebhook'] == 'outgoingAPIMessageReceived':
+            makeRecord("outgoing", json_data['messageData']['extendedTextMessageData']['text'])
         print(json_data)
 
     return render(request, 'index.html')
