@@ -1,4 +1,4 @@
-# Вэб-сайт на Python Django. 
+# Вэб-сайт на Django + React. 
 ## Django + ReactJs + drf.
 
 <br>
