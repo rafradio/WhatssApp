@@ -1,5 +1,5 @@
 # Вэб-сайт на Python Django. 
-## Djang0 + ReactJs + drf.
+## Django + ReactJs + drf.
 
 <br>
 
